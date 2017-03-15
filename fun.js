@@ -5,7 +5,7 @@ Object.size = function(obj) {
     }
     return size;
 };
-var ip = '192.168.1.3';
+var ip = '192.168.1.5';
 var port1      = 1000;
 
 var port2 = 1000;
@@ -61,6 +61,11 @@ console.log(url+"Sj");
 	    request.on('end', function () {
 		var params = JSON.parse(body);
 		console.log("Recived Params: "+JSON.stringify(params));
+    var opn = require('opn');
+
+// opens the url in the default browser
+opn('index.html');
+
 		 	var uuId = params.uuid;
 		 	var accessToken = params.access_token;
 
